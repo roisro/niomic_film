@@ -1,0 +1,99 @@
+.slider h3,
+.slider h5,
+{
+    text-shadow: 5px 1px 3px rgba(248, 5, 5, 0.966);
+    /* arti angka
+     px pertama : Bayangan ke kanan 1 pixel
+     px kedua : kebawah 1 pixel 
+     px ketiga : blur 
+     */
+}
+
+.sylabus h3 {
+   text-shadow: 3px 1px 3px rgb(250, 150, 19);
+}
+
+.parallax-container {
+    height: 250px;
+}
+
+.daftarkuy h3 {
+   font-weight: bold;
+   color : blue;
+}
+
+.xyz {
+   color: blue;
+}
+
+/* .daftarkuy h3{
+   color: rgba(3, 0, 2, 0.89);
+   font-family: Arial !important;
+   font-weight: bold;
+}
+
+.daftar{
+   color: rgba(10, 6, 230, 0.89) !;
+   font-family: Arial !important;
+   font-weight: bold;
+} */
+
+.img img {
+   width: 100% !important;
+}
+
+.parallax img {
+    filter: grayscale(1);
+    opacity: 0.5 !important;
+}
+
+.clients img {
+   max-width: 150px ;
+   filter: drop-shadow(3px 1px 1px rgba(0,0,0,0.8));
+}
+
+.boldtitle {
+   font-weight: bold;
+}
+
+section{
+   padding: 20px 0;
+}
+
+footer {
+   padding: 5px 0;
+}
+
+.row .col img {
+   width: 100%;
+}
+
+.card h5 {
+   padding: 20px 0;
+}
+
+i.icon-color {
+   color: rgb(250, 150, 19);
+}
+
+.satu img {
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+}
+
+.dua img {
+   border-radius: 20px;
+   height: 500px !important;
+}
+
+.pds h4 {
+   font-family: Arial !important;
+   font-weight: bold;
+}
+
+.ol {
+   color: rgba(3, 0, 2, 0.89);
+   font-family: Arial !important;
+   padding: 10px;
+   background: blue;
+}
