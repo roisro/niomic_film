@@ -25,7 +25,7 @@ const reducerFilm = ( state = stateFilm, action) => {
 const store = createStore(reducerFilm)
 
 ReactDOM.render(
-  <React.StrictMode>
+  
     <Auth0Provider
     domain="dev-ekejek3o.us.auth0.com"
     clientId="8QTJOQ1qBXf4uoWL8Xreu13zTseQ2d1C"
@@ -35,7 +35,7 @@ ReactDOM.render(
     <Routes />
     </Provider>
     </Auth0Provider>
-  </React.StrictMode>,
+  ,
   document.getElementById('root')
 );
 

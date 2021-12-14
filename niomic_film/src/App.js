@@ -29,28 +29,27 @@ class App extends Component {
             onClick={this.props.onClickedHeader}
           />
 
-        {this.props.activeItems === 'home'}
 
         <Menu.Menu position="right">
           <LoginButton />
           <LogoutButton />
         </Menu.Menu>
       </Menu>
-
+      {this.props.activeItems === 'home'}
     </div>
   );}
 }
 
 const mapStatetoProps  = (state) => {
   return {
-    activeItems : state.activeItems
+    activeItems : state.ctiveItems
   }
 }
 
 const mapDispatchtoProps  = (dispatch) => {
   return {
     onClickedHeader:(e, {name} ) => {
-      const action = {type : "ACTIVE_ITEM", activeItem: name}
+      const action = {type : "ACTIVE_ITEM", ActiveItem: name}
       dispatch (action)
     }
   }
