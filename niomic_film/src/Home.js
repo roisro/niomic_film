@@ -65,7 +65,7 @@ class Home extends Component {
         <>
             {this.state.loading ? (<h1> Loading ........</h1>) :(
                 <div>
-                         <Header size='large'>Top Films</Header>
+                    <Header size='large'>Top Films</Header>
            <Carousel autoPlay centerMode centerSlidePercentage={40} showStatus="false">
                 {/* Mapping data dari Axios */}
                 {this.state.dataCarausel.map((data,key) =>{
