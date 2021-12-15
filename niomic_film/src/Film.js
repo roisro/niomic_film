@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Grid, Image, Header, Card, Icon } from 'semantic-ui-react'
+import { Grid, Image, Header, Card, Icon, Input } from 'semantic-ui-react'
 import { connect } from 'react-redux';
 import axios from 'axios'
 
@@ -9,7 +9,8 @@ export class Film extends Component {
         super();
         this.state = {
             dataFilm:[],
-            loading:true
+            loading:true,
+            dataSearch:[]
         }
     }
 
@@ -30,6 +31,30 @@ getDataFilm = async ()=>{
         alert(JSON.stringify(error.message))
     }
 }
+// Function Search
+getDataSearch = async (e)=>{
+    if (e.target.value ===""){
+        this.getDataFilm()
+    }  
+    else {
+
+    
+    try {
+        await axios.get(`https://api.tvmaze.com/search/shows?q=${e.target.value}`, {crossDomain:true})
+        .then( (res) => {
+            console.log(res.data)
+            let dataRes = res.data
+            this.setState({
+            dataFilm:dataRes
+            })
+        })
+    }
+    catch(error){
+        alert(JSON.stringify(error.message))
+    }
+}
+}
+
 
   //Component yang dijalankan sebelum render
   //mengambil data film dari tv maze
@@ -52,6 +77,15 @@ getDataFilm = async ()=>{
                     <Image style={{marginTop:20}} src='https://cdn.pixabay.com/photo/2013/07/12/14/53/loudspeaker-148969_960_720.png' />
                 </Grid.Column>
                 <Grid.Column width={10}>
+                {/* Search Box */}
+                <div style={{marginBottom: "20px"}}>
+                    <Input icon='search' 
+                    placeholder='Search Film...' 
+                    // onChange={{e}=>{this.getDataSearch(e)}}
+                    onChange={(e)=> {this.getDataSearch(e)} }
+                    />
+                </div>
+
                     {/*Card Data Film  */}
                     <Grid columns={3} divided>
                         {this.state.dataFilm.map((data,key) =>{
