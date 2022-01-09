@@ -35,7 +35,7 @@ class App extends Component {
           <LogoutButton />
         </Menu.Menu>
       </Menu>
-      {this.props.activeItems === 'home'}
+      {this.props.activeItems === 'beranda'}
     </div>
   );}
 }

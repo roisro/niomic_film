@@ -145,7 +145,7 @@ class Actor extends Component {
 const mapDispatchtoProps = dispatch => {
     return dispatch({
         type: "ACTIVE_ITEM",
-        ActiveItem: "home"
+        ActiveItem: "actor"
     })
 }
 
