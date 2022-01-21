@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import { Grid, Image, Header, Card, Icon, Input } from 'semantic-ui-react'
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 import axios from 'axios'
-
 
 export class Film extends Component {
     constructor(){
@@ -106,7 +106,8 @@ getDataSearch = async (e)=>{
                             }
                                     return(      
                                     <Grid.Column key={key}>
-                                        <Card>
+                                        <Link to={`/Detail/${data.show.id}`}>
+                                        <Card>                                            
                                             <Image src={gambar} wrapped ui={false} />
                                             <Card.Content>
                                             <Card.Header>{data.show.name} {data.name}</Card.Header>
@@ -130,6 +131,7 @@ getDataSearch = async (e)=>{
                                             </h2>
                                             </Card.Content>
                                         </Card>
+                                        </Link>
                                     </Grid.Column>
                                 )
                             })}

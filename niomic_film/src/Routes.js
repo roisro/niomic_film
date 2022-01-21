@@ -5,6 +5,7 @@ import Home from './Home'
 import Actor from './Actor'
 import Film from './Film'
 import Beranda from './Beranda'
+import FilmDetail from './FilmDetail'
 import ProtectedRoute from './auth/protected-route'
 
 class Routes extends Component {
@@ -17,6 +18,7 @@ class Routes extends Component {
                 <Route path="/" exact component ={Beranda}></Route>
                 <Route path="/Home" component={Home} />
                 <ProtectedRoute path="/Film" component={Film} />
+                <ProtectedRoute path="/Detail/:id" component={FilmDetail} />
                 <ProtectedRoute path="/Actor" component={Actor} /> 
                 </Switch>
             </Router>

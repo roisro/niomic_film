@@ -180,4 +180,5 @@ const mapDispatchtoProps = dispatch => {
 }
 
 
+
   export default connect(null,mapDispatchtoProps) (Beranda);
