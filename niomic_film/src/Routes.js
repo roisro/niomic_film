@@ -17,9 +17,10 @@ class Routes extends Component {
 
                 <Route path="/" exact component ={Beranda}></Route>
                 <Route path="/Home" component={Home} />
-                <ProtectedRoute path="/Film" component={Film} />
-                <ProtectedRoute path="/Detail/:id" component={FilmDetail} />
-                <ProtectedRoute path="/Actor" component={Actor} /> 
+                <Route path="/Film" component={Film} />
+                <Route path="/Detail/:id" component={FilmDetail} />
+                <Route path="/Actor" component={Actor} /> 
+                {/* <ProtectedRoute path="/Actor" component={Actor} />  */}
                 </Switch>
             </Router>
         )
